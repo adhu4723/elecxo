@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
+import MobileBar from './MobileBar';
 
 function Layout() {
   return (
@@ -13,7 +14,7 @@ function Layout() {
       <main className="flex-grow px- mb-6">
         <Outlet />
       </main>
-
+      <MobileBar/>
       {/* Footer */}
       <Footer />
     </div>
