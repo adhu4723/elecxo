@@ -1,0 +1,1 @@
+import{u as r,j as s}from"./index-3PHQB6xY.js";function t(){const{name:o}=r();return console.log(o),s.jsx("div",{children:s.jsxs("h1",{children:["Showing 1 – 24 of 89 results for ",s.jsxs("strong",{children:[" ",o]})]})})}export{t as default};
