@@ -6,8 +6,8 @@ import TodaysDeal from '../components/TodaysDeal'
 
 function HomePage() {
   return (
-    <div className='px-4 space-y-2 lg:px-8'>
-      <Navbar />
+    <div className='px-4 space-y-6 lg:px-8'>
+    
       <Categories />
       <CarouselCustomNavigation />
       <TodaysDeal />

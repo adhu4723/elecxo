@@ -94,7 +94,22 @@ const electronicProducts = [
         rate: 49,
         description: "The Amazon Echo Dot (4th Gen) is a compact smart speaker with Alexa, improved sound quality, and voice control for your smart home.",
         image: "https://i.pcmag.com/imagery/reviews/04e3bEzJD7ng3WviIdH5URF-1.fit_scale.size_760x427.v1601313845.jpg"
-    }
+    },
+    {
+        name: "iPhone 14 Pro",
+        ratings: 4.8,
+        category: "Mobiles",
+        rate: 999,
+        description: "The iPhone 13 Pro features a stunning Super Retina XDR display, A15 Bionic chip, and a pro camera system for stunning photos and videos.",
+        image: "https://pngimg.com/d/iphone_12_PNG18.png"
+    }, {
+        name: "iPhone 13 Pro (256GB,Red)",
+        ratings: 4.8,
+        category: "Mobiles",
+        rate: 999,
+        description: "The iPhone 13 Pro features a stunning Super Retina XDR display, A15 Bionic chip, and a pro camera system for stunning photos and videos.",
+        image: "https://pngimg.com/d/iphone_12_PNG18.png"
+    },
 ];
 
 export default electronicProducts;

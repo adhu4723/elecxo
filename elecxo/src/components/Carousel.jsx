@@ -2,7 +2,7 @@ import { Carousel } from "@material-tailwind/react";
  
 export function CarouselCustomNavigation() {
   return (
-    <div className="h-[250px] w-full lg:w-[950px] lg:h-[350px] mx-auto  ">
+    <div className="h-[250px] w-full lg:w-full lg:h-[350px] mx-auto  ">
     <Carousel
       className="rounded-xl"
       navigation={({ setActiveIndex, activeIndex, length }) => (

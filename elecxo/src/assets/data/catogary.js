@@ -1,8 +1,5 @@
 const catogary = [
-    {
-        name: 'mobile',
-        image: 'https://pngimg.com/uploads/iphone_13/iphone_13_PNG30.png'
-    },
+    
     {
         name: 'Headphones',
         image: 'https://pngimg.com/d/headphones_PNG101980.png'
@@ -26,6 +23,9 @@ const catogary = [
     {
         name: 'Headphones',
         image: 'https://pngimg.com/d/headphones_PNG101980.png'
+    },{
+        name: 'mobile',
+        image: 'https://pngimg.com/uploads/iphone_13/iphone_13_PNG30.png'
     },
 ]
 

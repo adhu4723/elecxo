@@ -1,14 +1,19 @@
 import React from 'react';
 import electronicProducts from '../assets/data/product';
+import { Link } from 'react-router-dom';
 
-function SearchTab({ search }) {
-  // Convert search query to lowercase for case-insensitive matching
+function SearchTab({ search, setSearch, setShowDropdown }) {
   const searchQuery = search.toLowerCase().trim();
 
   // Filter products that start with the search query
   const filteredProducts = electronicProducts.filter((item) =>
     item.name.toLowerCase().startsWith(searchQuery)
   );
+
+  const handleSelectProduct = (name) => {
+    setSearch(name); // Set full product name in input field
+    setShowDropdown(false); // Close dropdown after selection
+  };
 
   return (
     <div
@@ -18,9 +23,15 @@ function SearchTab({ search }) {
     >
       {filteredProducts.length > 0 ? (
         filteredProducts.map((item) => (
-          <div key={item.id} className="p-2 hover:bg-gray-100 cursor-pointer">
-            {item.name}
-          </div>
+          <Link 
+            to={`/product/${item.name}`} 
+            key={item.id} 
+            onClick={() => handleSelectProduct(item.name)}
+          >
+            <div className="p-2 hover:bg-gray-100 cursor-pointer">
+              {item.name}
+            </div>
+          </Link>
         ))
       ) : (
         <div className="text-gray-500 p-2">No results found</div>

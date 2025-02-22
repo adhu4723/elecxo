@@ -1,24 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import electronicProducts from './assets/data/product'
-import Navbar from './layout/Navbar'
-import catogary from './assets/data/catogary'
-import Categories from './components/Categories'
-import { Route, Routes } from 'react-router-dom'
-import HomePage from './pages/HomePage'
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+
+// Lazy load components
+const Layout = lazy(() => import("./layout/Layout"));
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ProductList = lazy(() => import("./pages/ProductList"));
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Routes>
-      <Route path='/' element={<HomePage/>}></Route>
-    </Routes>  
-    </>
-  )
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product/:name" element={<ProductList />} />
+        </Route>
+      </Routes>
+    </Suspense>
+  );
 }
 
-export default App
+export default App;
