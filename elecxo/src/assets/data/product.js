@@ -1,6 +1,6 @@
 const electronicProducts = [
     {
-        name: "iPhone 13 Pro",
+        name: "Apple iPhone 13 Pro",
         ratings: 4.8,
         category: "Mobiles",
         rate: 999,
@@ -64,6 +64,22 @@ const electronicProducts = [
         image: "https://financialexpresswpcontent.s3.amazonaws.com/uploads/2021/10/sony-a80j2.png"
     },
     {
+        name: "Apple Watch Series 8",
+        ratings: 4.7,
+        category: "Wearables",
+        rate: 399,
+        description: "The Apple Watch Series 7 features a larger, more durable display, advanced health monitoring, and fast charging.",
+        image: "https://i0.wp.com/cellbuddy.in/buddy/wp-content/uploads/2022/09/Series-7-41-_-45mm-GPS-Blue.png?fit=800%2C800&ssl=1"
+    },
+    {
+        name: "Apple Watch ultra 9",
+        ratings: 4.7,
+        category: "Wearables",
+        rate: 399,
+        description: "The Apple Watch Series 7 features a larger, more durable display, advanced health monitoring, and fast charging.",
+        image: "https://i0.wp.com/cellbuddy.in/buddy/wp-content/uploads/2022/09/Series-7-41-_-45mm-GPS-Blue.png?fit=800%2C800&ssl=1"
+    },
+    {
         name: "LG C1 OLED",
         ratings: 4.7,
         category: "Televisions",
@@ -96,14 +112,14 @@ const electronicProducts = [
         image: "https://i.pcmag.com/imagery/reviews/04e3bEzJD7ng3WviIdH5URF-1.fit_scale.size_760x427.v1601313845.jpg"
     },
     {
-        name: "iPhone 14 Pro",
+        name: "Apple iPhone 14 Pro",
         ratings: 4.8,
         category: "Mobiles",
         rate: 999,
         description: "The iPhone 13 Pro features a stunning Super Retina XDR display, A15 Bionic chip, and a pro camera system for stunning photos and videos.",
         image: "https://pngimg.com/d/iphone_12_PNG18.png"
     }, {
-        name: "iPhone 13 Pro (256GB,Red)",
+        name: "Apple iPhone 13 Pro (256GB,Red)",
         ratings: 4.8,
         category: "Mobiles",
         rate: 999,
