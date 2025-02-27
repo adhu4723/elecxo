@@ -19,7 +19,7 @@ function MobileBar() {
           key={item.path}
           to={item.path}
           className={`flex flex-col w-full items-center p-2 rounded-lg transition-all duration-200 ${
-            location.pathname === item.path ? "bg-gray-200 text-blue-600" : "text-gray-600"
+            location.pathname === item.path ? "bg-blue-100 text-blue-600" : "text-gray-600"
           }`}
         >
           {item.icon}

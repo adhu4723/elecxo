@@ -74,9 +74,9 @@ function Footer() {
           {/* Contact Us */}
           <div className="text-right">
             <h3 className="font-semibold">Contact Us</h3>
-            <p>B-11 D.S.I.D.C Complex, F.I.E</p>
-            <p>Patparganj Industrial Area</p>
-            <p>New Delhi, Delhi 110092</p>
+            <p>Near Old Bustand</p>
+            <p>Jawahar Library</p>
+            <p>Kannur -670010</p>
             <p>011 4242 0976</p>
           </div>
         </div>

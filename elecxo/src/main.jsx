@@ -9,6 +9,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>
     <HashRouter>
+      
     <App />
     </HashRouter>
     </CartProvider>
