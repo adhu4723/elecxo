@@ -51,7 +51,7 @@ function CartDrawer({ isOpen, onClose }) {
               <div className="flex items-center gap-2">
                 <img width={90} height={110} src={item.image} alt={item.name} className="rounded-lg" />
                 <div>
-                  <p className="line-clamp-2 text-sm">{item.name}</p>
+                  <p className="line-clamp-2 text-lg">{item.name}</p>
                   <p className="text-lg font-bold">Rs. {item.rate}</p>
                 </div>
               </div>

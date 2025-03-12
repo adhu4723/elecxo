@@ -24,7 +24,7 @@ function SearchTab({ search, setSearch, setShowDropdown }) {
       {filteredProducts.length > 0 ? (
         filteredProducts.map((item) => (
           <Link 
-            to={`/product/${item.name}`} 
+            to={`/product/${item.id}`} 
             key={item.id} 
             onClick={() => handleSelectProduct(item.name)}
           >

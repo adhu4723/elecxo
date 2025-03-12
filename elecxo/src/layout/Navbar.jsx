@@ -44,9 +44,9 @@ function Navbar() {
                     )}
                 </div>
                 <div className='hidden  lg:flex gap-2'>
-                    <div className=''>
+                    <Link to={'/login'} className=''>
                         <IconBadge Icon={User} />
-                    </div>
+                    </Link>
                 </div>
                 <button onClick={() => setIsCartOpen(true)}>
                     <IconBadge Icon={ShoppingCart} count={cartItems.length} />
