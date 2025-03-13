@@ -7,10 +7,12 @@
 </head>
 <body>
     <script>
-        // Get the current path and remove any extra "/elecxo/" duplications
-        var path = window.location.pathname.replace(/^\/elecxo\/+/, "/"); 
-        // Redirect to the correct path inside /elecxo/
-        window.location.replace("/elecxo" + path);
+        // Ensure we only add "/elecxo" if it's not already there
+        var pathname = window.location.pathname;
+
+        if (!pathname.startsWith("/elecxo")) {
+            window.location.replace("/elecxo" + pathname);
+        }
     </script>
 </body>
 </html>
