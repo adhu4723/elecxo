@@ -15,7 +15,7 @@ function FilterTab({ onPriceChange }) {
   };
 
   return (
-    <div className='h-[100vh] bg-white shadow-sm px-2 py-4'>
+    <div className='h-[100vh] bg-white shadow-sm px-2 py-4 '>
       <h1 className='text-lg text-center font-bold uppercase mb-6'>Filter</h1>
       <div>
         <div className='flex justify-between'>
@@ -24,11 +24,11 @@ function FilterTab({ onPriceChange }) {
 
         </div>
 
-        <Box sx={{ width: 300, margin: 'auto' }}>
+        <Box sx={{ width: 280, margin: 'auto' }}>
           <Slider
             min={0}
             max={100000}
-            step={100}
+            step={10000}
             value={priceRange}
             onChange={handleChange}
             valueLabelDisplay="auto"
