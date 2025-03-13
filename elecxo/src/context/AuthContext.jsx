@@ -20,8 +20,8 @@ export const AuthProvider = ({ children }) => {
     navigate('/'); // Navigate after login
   };
 
-  const signup = (username, password) => {
-    const newUser = { username };
+  const signup = (username, password,name) => {
+    const newUser = {name, username };
     setUser(newUser);
     localStorage.setItem("user", JSON.stringify(newUser)); // Store properly
     navigate('/'); // Navigate after signup

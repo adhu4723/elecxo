@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { Drawer, Typography, IconButton, Button } from "@material-tailwind/react";
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 function CartDrawer({ isOpen, onClose }) {
-  const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
+  const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart ,cartTotal } = useCart();
+  console.log(cartTotal().toFixed(2),'cart total');
+  
 
   useEffect(() => {
     if (isOpen) {
@@ -91,7 +94,7 @@ function CartDrawer({ isOpen, onClose }) {
           <Button size="sm" variant="outlined" onClick={onClose}>
             Continue Shopping
           </Button>
-          <Button size="sm">Checkout</Button>
+          <Button size="sm"> <Link to={'/checkout'}>Checkout</Link> </Button>
         </div>
       )}
     </Drawer>

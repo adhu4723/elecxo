@@ -11,7 +11,7 @@ function Layout() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow px- mb-6">
+      <main className="flex-grow px- mb-6 ">
         <Outlet />
       </main>
       <MobileBar/>

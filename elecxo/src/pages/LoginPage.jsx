@@ -13,7 +13,7 @@ const Login = () => {
         };
   return (
     <div className="flex h-[80vh] items-center justify-center bg-gray-200">
-      <div className="flex w-3/5 overflow-hidden rounded-lg bg-white shadow-lg">
+      <div className="flex w-full lg:w-3/5 overflow-hidden rounded-lg bg-white shadow-lg">
         {/* Left Section with Image and Text */}
         <div className="hidden lg:block lg:w-1/2 bg-cover bg-center p-8" style={{ backgroundImage: 'url("/mnt/data/Login.png")' }}>
           <h2 className="text-xl font-bold text-blue-600">Elec<span className="text-black">XO</span></h2>
@@ -26,17 +26,17 @@ const Login = () => {
         </div>
 
         {/* Right Section with Form */}
-        <div className="flex lg:w-1/2 flex-col justify-center p-8">
+        <div className="flex w-full lg:w-1/2 flex-col justify-center p-8">
           <input
             type="text"
             placeholder="Username"
-            className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm outline-blue-600   focus:ring-blue-500"
             onChange={(e) => setUsername(e.target.value)}
          />
           <input
             type="password"
             placeholder="Password"
-            className="mb-2 w-full rounded border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mb-2 w-full rounded border-gray-300 p-3 shadow-sm outline-blue-600 focus:border-blue-500 focus:ring-blue-500"
             onChange={(e) => setPassword(e.target.value)}
 
          />

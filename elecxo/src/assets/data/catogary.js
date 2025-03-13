@@ -1,8 +1,8 @@
 const catogary = [
     
     {
-        name: 'Headphones',
-        image: 'https://pngimg.com/d/headphones_PNG101980.png'
+        name: 'Televisions',
+        image: 'https://financialexpresswpcontent.s3.amazonaws.com/uploads/2021/10/sony-a80j2.png'
     },
     {
         name: 'Wearables',
@@ -24,7 +24,7 @@ const catogary = [
         name: 'Headphones',
         image: 'https://pngimg.com/d/headphones_PNG101980.png'
     },{
-        name: 'mobile',
+        name: 'Mobiles',
         image: 'https://pngimg.com/uploads/iphone_13/iphone_13_PNG30.png'
     },
 ]

@@ -5,15 +5,16 @@ const Signup = () => {
     const { signup,user } = useAuth();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [name,setname]=useState('')
   console.log(user);
   
     const handleSignup = () => {
-      signup(username, password);
+      signup(username, password,name);
     };
   
     return (
       <div className="flex h-[80vh] items-center justify-center bg-gray-200">
-        <div className="flex w-3/5 overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className="flex w-full lg:w-3/5 overflow-hidden rounded-lg bg-white shadow-lg">
           {/* Left Section with Image and Text */}
           <div className="hidden lg:block lg:w-1/2 bg-cover bg-center p-8" style={{ backgroundImage: 'url("/mnt/data/Sign-up.png")' }}>
             <h2 className="text-xl font-bold text-blue-600">Elec<span className="text-black">XO</span></h2>
@@ -26,7 +27,14 @@ const Signup = () => {
           </div>
   
           {/* Right Section with Form */}
-          <div className="flex lg:w-1/2 flex-col justify-center p-8">
+          <div className="flex w-full lg:w-1/2 flex-col justify-center p-8">
+          <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setname(e.target.value)}
+              className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
             <input
               type="text"
               placeholder="Username"

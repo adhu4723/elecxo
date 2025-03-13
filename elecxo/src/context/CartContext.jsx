@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 // Create Cart Context
@@ -6,36 +6,38 @@ const CartContext = createContext();
 
 // Cart Provider Component
 export const CartProvider = ({ children }) => {
-    const [cartItems, setCartItems] = useState([]);
-    console.log(cartItems);
+    const [cartItems, setCartItems] = useState(() => {
+        // Load cart items from localStorage if available
+        const storedCart = localStorage.getItem("cartItems");
+        return storedCart ? JSON.parse(storedCart) : [];
+    });
+
+    // Save cart items to localStorage whenever it changes
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems]);
 
     const addToCart = (product) => {
         setCartItems(prevItems => {
             const existingItem = prevItems.find(item => item.id === product.id);
 
             if (existingItem) {
-
-                console.log('Item already in cart:', existingItem);
-
-                return prevItems; // Don't modify state if the item already exists
-
+                return prevItems;
             } else {
-                console.log('Adding new item to cart:', product);
                 return [...prevItems, { ...product, quantity: 1 }];
             }
         });
-        
-        // Move toast notification outside setCartItems
-        const isItemInCart = cartItems.some(item => item.id === product.id);
-        console.log(isItemInCart);
-        
-        if (isItemInCart) {
-            toast.error("Item already in cart!");
-        } else {
-            toast.success("Item added to cart!");
-        }
-    };
 
+                // Move toast notification outside setCartItems
+                const isItemInCart = cartItems.some(item => item.id === product.id);
+                console.log(isItemInCart);
+                
+                if (isItemInCart) {
+                    toast.error("Item already in cart!");
+                } else {
+                    toast.success("Item added to cart!");
+                }
+    };
 
     const removeFromCart = (id) => {
         setCartItems(prevItems => prevItems.filter(item => item.id !== id));
@@ -57,8 +59,13 @@ export const CartProvider = ({ children }) => {
         ));
     };
 
+    const cartTotal = () => {
+        return cartItems.reduce((total, item) => total + item.rate * item.quantity, 0);
+    };
+
     const clearCart = () => {
         setCartItems([]);
+        localStorage.removeItem("cartItems");
     };
 
     return (
@@ -68,7 +75,8 @@ export const CartProvider = ({ children }) => {
             removeFromCart,
             increaseQuantity,
             decreaseQuantity,
-            clearCart
+            clearCart,
+            cartTotal
         }}>
             {children}
         </CartContext.Provider>

@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Login from "./pages/LoginPage";
 import Signup from "./pages/SignUp";
 import ProtectedRoute from "./components/ProtectRoute";
+import Checkout from "./pages/CheckOut";
 
 // Lazy load components
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -21,11 +22,13 @@ function App() {
         <Route element={<Layout />}>
           <Route element={<ProtectedRoute/>}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/product/:id" element={<ProductList />} />
+          <Route path="/product/:category" element={<ProductList />} />
           </Route>
           <Route path="/*" element={<NotFound />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
+
         </Route>
       </Routes>
     </Suspense>
