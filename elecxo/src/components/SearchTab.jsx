@@ -5,14 +5,31 @@ import { Link } from 'react-router-dom';
 function SearchTab({ search, setSearch, setShowDropdown }) {
   const searchQuery = search.toLowerCase().trim();
 
-  // Filter products that start with the search query
+  // Filter products that contain the search query (not just starting with it)
   const filteredProducts = electronicProducts.filter((item) =>
-    item.name.toLowerCase().startsWith(searchQuery)
+    item.name.toLowerCase().includes(searchQuery)
   );
 
   const handleSelectProduct = (name) => {
     setSearch(name); // Set full product name in input field
     setShowDropdown(false); // Close dropdown after selection
+  };
+
+  const highlightMatch = (name) => {
+    const index = name.toLowerCase().indexOf(searchQuery);
+    console.log(index);
+    
+    if (index === -1) return name; // If no match, return original name
+
+    return (
+      <>
+        {name.substring(0, index)}
+        <span className="bg-yellow-300 text-black font-semibold">
+          {name.substring(index, index + searchQuery.length)}
+        </span>
+        {name.substring(index + searchQuery.length)}
+      </>
+    );
   };
 
   return (
@@ -24,12 +41,12 @@ function SearchTab({ search, setSearch, setShowDropdown }) {
       {filteredProducts.length > 0 ? (
         filteredProducts.map((item) => (
           <Link 
-            to={`/product/${item.id}`} 
+            to={`/productdetails/${item.id}`} 
             key={item.id} 
             onClick={() => handleSelectProduct(item.name)}
           >
             <div className="p-2 hover:bg-gray-100 cursor-pointer">
-              {item.name}
+              {highlightMatch(item.name)}
             </div>
           </Link>
         ))

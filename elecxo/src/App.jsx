@@ -9,6 +9,8 @@ import Login from "./pages/LoginPage";
 import Signup from "./pages/SignUp";
 import ProtectedRoute from "./components/ProtectRoute";
 import Checkout from "./pages/CheckOut";
+import ProductDetails from "./pages/ProductDetails";
+import ScrollToTop from "./components/ScrollTop";
 
 // Lazy load components
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -18,7 +20,9 @@ function App() {
   return (
     <Suspense fallback={<div className="w-fit mx-auto mt-[250px] bg-transparent"><Loader/></div>}>
       <ToastContainer />
+      <ScrollToTop/>
       <Routes>
+        
         <Route element={<Layout />}>
           <Route element={<ProtectedRoute/>}>
           <Route path="/" element={<HomePage />} />
@@ -28,6 +32,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/checkout" element={<Checkout />}></Route>
+          <Route path="/productdetails/:id" element={<ProductDetails />}></Route>
 
         </Route>
       </Routes>

@@ -33,21 +33,21 @@ const Signup = () => {
               placeholder="Name"
               value={name}
               onChange={(e) => setname(e.target.value)}
-              className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"
             />
             <input
               type="text"
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"
             />
             <button onClick={handleSignup} className="mb-4 w-full rounded bg-blue-500 p-3 text-white hover:bg-blue-600">
               Sign Up

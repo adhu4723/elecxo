@@ -30,14 +30,12 @@ const Login = () => {
           <input
             type="text"
             placeholder="Username"
-            className="mb-4 w-full rounded border-gray-300 p-3 shadow-sm outline-blue-600   focus:ring-blue-500"
-            onChange={(e) => setUsername(e.target.value)}
+            className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"            onChange={(e) => setUsername(e.target.value)}
          />
           <input
             type="password"
             placeholder="Password"
-            className="mb-2 w-full rounded border-gray-300 p-3 shadow-sm outline-blue-600 focus:border-blue-500 focus:ring-blue-500"
-            onChange={(e) => setPassword(e.target.value)}
+            className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"            onChange={(e) => setPassword(e.target.value)}
 
          />
           <a href="#" className="mb-4 text-right text-sm text-blue-500">

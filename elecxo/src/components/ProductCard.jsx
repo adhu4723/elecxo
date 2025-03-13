@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const Card = ({ productData }) => {
   const { addToCart } = useCart();
@@ -10,7 +11,7 @@ const Card = ({ productData }) => {
       <div className="flex flex-col gap-4">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
-            <span className="text-xl font-bold line-clamp-1">{productData?.name || 'Product Name'}</span>
+            <Link to={`/productdetails/${productData.id}`} className="text-xl font-bold line-clamp-1">{productData?.name || 'Product Name'}</Link>
             <p className="text-xs text-gray-700 line-clamp-2">{productData?.description || 'Product Description'}</p>
             <span className="font-bold text-red-600">{productData?.rate || 'Price'}</span>
           </div>
