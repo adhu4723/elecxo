@@ -168,7 +168,7 @@ const electronicProducts = [
         category: "Cameras",
         rate: 44999, // ₹44,999
         description: "The GoPro Hero 11 Black features 5.3K video, HyperSmooth 5.0 stabilization, and waterproof capabilities for adventure enthusiasts.",
-        image: "https://gopro.com/content/dam/gopro-storefront/tablet/hero11-black.png"
+        image: "https://assets.gadgetandgear.com/upload/product/20221014_1665723000_878544.jpeg"
     },
     {
         id: 20,

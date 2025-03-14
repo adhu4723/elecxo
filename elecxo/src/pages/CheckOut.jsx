@@ -2,6 +2,7 @@ import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Trash2 } from 'lucide-react';
 import TextInput from '../components/inputs/TextInput';
+import { Link } from 'react-router-dom';
 
 const CheckoutPage = () => {
       const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart ,cartTotal } = useCart();
@@ -10,7 +11,7 @@ const CheckoutPage = () => {
     <div className="container  mx-auto p-4">
     
  <div className='grid grid-cols-1 lg:grid-cols-2 justify-center  '>
-      <div className="mb-6 border px-8 py-4 border-gray-500">
+      <div className="mb-6  px-8 py-4 shadow-lg">
         <h3 className="text-lg font-medium mb-2">Shipping Information</h3>
         <div className="flex space-x-4 mb-4">
           <button className="px-4 py-2 bg-gray-200 rounded">Delivery</button>
@@ -60,23 +61,38 @@ const CheckoutPage = () => {
         </form>
       </div>
 
-      <div className="mb-6 border px-8 py-4  border-gray-500">
+      <div className="mb-6  px-8 py-4  border-gray-500">
         <h3 className="text-lg font-medium mb-2">Review your cart</h3>
         <div className="space-y-2 h-[250px] overflow-auto px-4 py-2">
-            {cartItems.map(items=>(
-                <div className=" flex gap-6 items-center border py-2 px-3 relative">
-            <img width={100} height={100} src={items.image} alt="" />
-           <div>
-           <span className='font-bold'>{items.name}</span> <br />
-           <span>QTY: {items.quantity} </span> <br />
-           <span>{items.rate}</span>
-           </div>
-            <button onClick={()=>removeFromCart(items.id)} className='bg-red-600 text-white px-2 py-1 rounded-full absolute -top-3 -right-3'> <Trash2/> </button>
-          </div>
-            ))}
-          
-          
+  {cartItems && cartItems.length > 0 ? (
+    cartItems.map((items) => (
+      <div key={items.id} className="flex gap-6 items-center border py-2 px-3 relative">
+        <img width={100} height={100} src={items.image} alt={items.name} />
+        <div>
+          <span className="font-bold">{items.name}</span> <br />
+          <span>QTY: {items.quantity} </span> <br />
+          <span>{items.rate}</span>
         </div>
+        <button
+          onClick={() => removeFromCart(items.id)}
+          className="bg-red-600 text-white px-2 py-1 rounded-full absolute -top-3 -right-3"
+        >
+          <Trash2 />
+        </button>
+      </div>
+    ))
+  ) : (
+    <div className='flex gap-4 items-center justify-center'>
+    <img
+    width={230}
+      src="https://images.vexels.com/media/users/3/192486/isolated/preview/b21f813da2e0c122d2950bf1b449106a-winter-woman-shopping-illustration.png"
+      alt="Empty Cart"
+    />
+    <Link className='bg-blue-700 text-white uppercase px-4 py-2'  to={'/'}>Shop Now</Link>
+    </div>
+  )}
+</div>
+
         <div className="mt-4">
           <label className="flex items-center">
             <input type="checkbox" className="mr-2" />

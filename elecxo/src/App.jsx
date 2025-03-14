@@ -11,6 +11,7 @@ import ProtectedRoute from "./components/ProtectRoute";
 import Checkout from "./pages/CheckOut";
 import ProductDetails from "./pages/ProductDetails";
 import ScrollToTop from "./components/ScrollTop";
+import ProfileForm from "./pages/ProfileSettings";
 
 // Lazy load components
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -30,9 +31,10 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route element={<ProtectedRoute/>}>
-          <Route path="/checkout" element={<Checkout />}></Route></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
+          <Route path="/profile" element={<ProfileForm />}></Route>
+          </Route>
           <Route path="/productdetails/:id" element={<ProductDetails />}></Route>
-
         </Route>
       </Routes>
     </Suspense>

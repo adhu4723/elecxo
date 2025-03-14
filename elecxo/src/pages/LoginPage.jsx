@@ -3,19 +3,29 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
-     const { signup,user } = useAuth();
-        const [username, setUsername] = useState("");
+     const { login,user } = useAuth();
+        const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
+        const [error,setError]=useState('')
       console.log(user);
       
         const handleLogin = () => {
-          signup(username, password);
+          if (email=="") {
+            setError("* Email Required")
+          } else if(password==""){
+            setError("* Password Required")
+
+          }else{
+            login(email, password);
+
+          }
+
         };
   return (
     <div className="flex h-[80vh] items-center justify-center bg-gray-200">
       <div className="flex w-full lg:w-3/5 overflow-hidden rounded-lg bg-white shadow-lg">
         {/* Left Section with Image and Text */}
-        <div className="hidden lg:block lg:w-1/2 bg-cover bg-center p-8" style={{ backgroundImage: 'url("/mnt/data/Login.png")' }}>
+        <div className="hidden lg:block lg:w-1/2 bg-cover bg-center p-8 py-12" style={{ backgroundImage: 'url("https://img.freepik.com/free-vector/blue-curve-frame-template_53876-116707.jpg")' }}>
           <h2 className="text-xl font-bold text-blue-600">Elec<span className="text-black">XO</span></h2>
           <h1 className="mt-2 text-4xl font-bold">
             <span className="text-blue-500">Log</span><span className="text-gray-900">in</span>
@@ -29,15 +39,16 @@ const Login = () => {
         <div className="flex w-full lg:w-1/2 flex-col justify-center p-8">
           <input
             type="text"
-            placeholder="Username"
-            className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Email"
+            className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"  onChange={(e) => setEmail(e.target.value)}
          />
           <input
             type="password"
             placeholder="Password"
-            className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"            onChange={(e) => setPassword(e.target.value)}
+            className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none" onChange={(e) => setPassword(e.target.value)}
 
          />
+        {error && <p className="bg-red-100 font-mono text-red-600 px-2 py-3">{error}</p> } 
           <a href="#" className="mb-4 text-right text-sm text-blue-500">
             Forget Password?
           </a>

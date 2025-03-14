@@ -10,7 +10,7 @@ function TodaysDeal() {
         today's deal
       </h1>
       <div className='grid grid-cols-2 gap-2 lg:grid-cols-5 '>
-    {electronicProducts.slice(0, 11).map((items)=>(
+    {electronicProducts.slice(0, 5).map((items)=>(
     <Card productData={items} />
 ))}
       </div>

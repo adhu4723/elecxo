@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 function HorizontalCard({productData}) {
           const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart ,cartTotal,addToCart } = useCart();
@@ -10,7 +11,7 @@ function HorizontalCard({productData}) {
                 <img className='  h-[250px]  mx-auto' src={productData?.image||''} alt="" />
             </div>
             <div className='space-y-3'>
-                <h1 className='text-2xl font-semibold'>{productData?.name||''}</h1>
+                <Link to={`/productdetails/${productData.id}`} className='text-2xl  font-bold'>{productData?.name||''}</Link>
                 <div className='flex gap-2 items-center'>
                 <p className='bg-green-600 text-white px-2 py-1 rounded-md w-fit'>4.6</p>
 

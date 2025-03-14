@@ -12,8 +12,7 @@ const Card = ({ productData }) => {
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
             <Link to={`/productdetails/${productData.id}`} className="text-xl font-bold line-clamp-1">{productData?.name || 'Product Name'}</Link>
-            <p className="text-xs text-gray-700 line-clamp-2">{productData?.description || 'Product Description'}</p>
-            <span className="font-bold text-red-600">{productData?.rate || 'Price'}</span>
+            <span className="font-bold text-red-600"> Rs. {productData?.rate || 'Price'}</span>
           </div>
         </div>
         <button

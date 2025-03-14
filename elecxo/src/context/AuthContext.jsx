@@ -13,15 +13,15 @@ export const AuthProvider = ({ children }) => {
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
-  const login = (username, password) => {
-    const newUser = { username };
+  const login = (email, password) => {
+    const newUser = { email };
     setUser(newUser);
     localStorage.setItem("user", JSON.stringify(newUser)); // Store properly
     navigate('/'); // Navigate after login
   };
 
-  const signup = (username, password,name) => {
-    const newUser = {name, username };
+  const signup = (email, password,name) => {
+    const newUser = {name, email };
     setUser(newUser);
     localStorage.setItem("user", JSON.stringify(newUser)); // Store properly
     navigate('/'); // Navigate after signup
