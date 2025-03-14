@@ -24,7 +24,7 @@ function SearchTab({ search, setSearch, setShowDropdown }) {
     return (
       <>
         {name.substring(0, index)}
-        <span className="bg-yellow-300 text-black font-semibold">
+        <span className="bg-gray-300 p-2 text-black font-semibold">
           {name.substring(index, index + searchQuery.length)}
         </span>
         {name.substring(index + searchQuery.length)}

@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user"); // Remove on logout
-    navigate('/login'); // Redirect to login page after logout
+    // navigate('/login'); // Redirect to login page after logout
   };
 
   return (

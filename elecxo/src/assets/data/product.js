@@ -115,6 +115,78 @@ const electronicProducts = [
         rate: 129900, // ₹1,29,900
         description: "The iPhone 14 Pro features a stunning Super Retina XDR display, A16 Bionic chip, and a pro camera system for stunning photos and videos.",
         image: "https://pngimg.com/d/iphone_12_PNG18.png"
+    },
+    {
+        id: 14,
+        name: "Samsung Galaxy Z Fold 4",
+        ratings: 4.7,
+        category: "Mobiles",
+        rate: 154999, // ₹1,54,999
+        description: "The Samsung Galaxy Z Fold 4 offers an immersive foldable display, Snapdragon 8+ Gen 1 processor, and multitasking capabilities.",
+        image: "https://images.samsung.com/is/image/samsung/p6pim/in/sm-f936bzkhinu/gallery/in-galaxy-z-fold4-f936-432849-sm-f936bzkhinu-533834337?$720_576_PNG$"
+    },
+    {
+        id: 15,
+        name: "Google Pixel 7 Pro",
+        ratings: 4.6,
+        category: "Mobiles",
+        rate: 84999, // ₹84,999
+        description: "Google Pixel 7 Pro features a powerful Tensor G2 chip, an advanced camera system, and a stunning 120Hz OLED display.",
+        image: "https://store.google.com/Pixel_7_Pro_White.png"
+    },
+    {
+        id: 16,
+        name: "JBL Charge 5",
+        ratings: 4.5,
+        category: "Speakers",
+        rate: 15999, // ₹15,999
+        description: "JBL Charge 5 delivers powerful sound, a built-in power bank, and IP67 waterproof rating for outdoor adventures.",
+        image: "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8aef1161/JBL_Charge_5_Hero.png"
+    },
+    {
+        id: 17,
+        name: "Asus ROG Strix G15",
+        ratings: 4.8,
+        category: "Laptops",
+        rate: 124999, // ₹1,24,999
+        description: "The Asus ROG Strix G15 is a gaming powerhouse featuring Ryzen 9, RTX 3070, and a 300Hz refresh rate display.",
+        image: "https://dlcdnwebimgs.asus.com/gain/6F8E91EC-4E4F-4B26-9153-56D4E586E55A"
+    },
+    {
+        id: 18,
+        name: "Samsung 55-inch QN90B Neo QLED TV",
+        ratings: 4.9,
+        category: "Televisions",
+        rate: 59999, // ₹1,59,999
+        description: "Samsung QN90B Neo QLED TV features Quantum Matrix Technology, 4K AI upscaling, and a stunning HDR experience.",
+        image: "https://images.samsung.com/is/image/samsung/p6pim/in/qa55qn90baklxl/gallery/in-qled-qn90b-qa55qn90baklxl-537166497?$684_547_PNG$"
+    },
+    {
+        id: 19,
+        name: "GoPro Hero 11 Black",
+        ratings: 4.7,
+        category: "Cameras",
+        rate: 44999, // ₹44,999
+        description: "The GoPro Hero 11 Black features 5.3K video, HyperSmooth 5.0 stabilization, and waterproof capabilities for adventure enthusiasts.",
+        image: "https://gopro.com/content/dam/gopro-storefront/tablet/hero11-black.png"
+    },
+    {
+        id: 20,
+        name: "Dyson V15 Detect Vacuum Cleaner",
+        ratings: 4.8,
+        category: "Home Appliances",
+        rate: 62900, // ₹62,900
+        description: "The Dyson V15 Detect features laser dust detection, powerful suction, and intelligent cleaning modes.",
+        image: "https://www.dyson.com.sg/media/catalog/product/cache/0d02df05d5aef33a5a2a589bdfdce9cc/v/1/v15detect-1.png"
+    },
+    {
+        id: 21,
+        name: "Sony PlayStation 5",
+        ratings: 4.9,
+        category: "Gaming",
+        rate: 54999, // ₹54,999
+        description: "The PlayStation 5 delivers ultra-fast SSD performance, 4K gaming, and immersive haptic feedback with the DualSense controller.",
+        image: "https://cdn.alzashop.com/ImgW.ashx?fd=f4&cd=PS5"
     }
 ];
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Trash2 } from 'lucide-react';
+import TextInput from '../components/inputs/TextInput';
 
 const CheckoutPage = () => {
       const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart ,cartTotal } = useCart();
@@ -19,19 +20,19 @@ const CheckoutPage = () => {
         <form>
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Full name *</label>
-            <input type="text" placeholder="Enter full name" className="w-full p-2 border rounded" />
+            <TextInput type="text" placeholder="Enter full name"  />
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Email address *</label>
-            <input type="email" placeholder="Enter email address" className="w-full p-2 border rounded" />
+            <TextInput type="email" placeholder="Enter email address"  />
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Phone number *</label>
-            <input type="tel" placeholder="Enter phone number" className="w-full p-2 border rounded" />
+            <TextInput type="tel" placeholder="Enter phone number"  />
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Country *</label>
-            <select className="w-full p-2 border rounded">
+            <select className="w-full p-2 border-b-2 border-gray-300 rounded">
               <option>Choose state</option>
               {/* Add more options here */}
             </select>
@@ -39,15 +40,15 @@ const CheckoutPage = () => {
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div>
               <label className="block text-sm font-medium mb-1">City</label>
-              <input type="text" placeholder="Enter city" className="w-full p-2 border rounded" />
+              <TextInput type="text" placeholder="Enter city" />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">State</label>
-              <input type="text" placeholder="Enter state" className="w-full p-2 border rounded" />
+              <TextInput type="text" placeholder="Enter state"  />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">ZIP Code</label>
-              <input type="text" placeholder="Enter ZIP code" className="w-full p-2 border rounded" />
+              <TextInput type="text" placeholder="Enter ZIP code"  />
             </div>
           </div>
           <div className="mb-4">

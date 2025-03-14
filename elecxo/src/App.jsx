@@ -24,14 +24,13 @@ function App() {
       <Routes>
         
         <Route element={<Layout />}>
-          <Route element={<ProtectedRoute/>}>
           <Route path="/" element={<HomePage />} />
           <Route path="/product/:category" element={<ProductList />} />
-          </Route>
           <Route path="/*" element={<NotFound />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
-          <Route path="/checkout" element={<Checkout />}></Route>
+          <Route element={<ProtectedRoute/>}>
+          <Route path="/checkout" element={<Checkout />}></Route></Route>
           <Route path="/productdetails/:id" element={<ProductDetails />}></Route>
 
         </Route>
