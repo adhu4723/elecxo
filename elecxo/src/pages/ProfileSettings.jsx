@@ -73,7 +73,7 @@ const ProfileForm = () => {
         <div className="flex items-center gap-4 mt-2 p-3 bg-gray-100 rounded-md">
           <span className="bg-blue-500 text-white p-2 rounded-full">📧</span>
           <div>
-            <p className="text-gray-800">alexarawles@gmail.com</p>
+            <p className="text-gray-800">{user?.email}</p>
             <p className="text-gray-500 text-sm">1 month ago</p>
           </div>
         </div>

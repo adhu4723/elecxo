@@ -62,7 +62,7 @@ function Navbar() {
                         <IconBadge Icon={User} />
                     </button>
                     {show && (
-                        <div className='absolute  -left-[80px]  w-[150px]'>
+                        <div className='absolute  -left-[55px]  w-[150px]'>
                             <ProfileTab show={show} setShow={setShow} />
                         </div>
                     )}

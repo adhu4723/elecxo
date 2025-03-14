@@ -9,18 +9,21 @@ const Login = () => {
         const [error,setError]=useState('')
       console.log(user);
       
-        const handleLogin = () => {
-          if (email=="") {
-            setError("* Email Required")
-          } else if(password==""){
-            setError("* Password Required")
-
-          }else{
-            login(email, password);
-
-          }
-
-        };
+      const handleLogin = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validates email format
+      
+        if (email === "") {
+          setError("* Email Required");
+        } else if (!emailRegex.test(email)) {
+          setError("* Invalid Email Format");
+        } else if (password === "") {
+          setError("* Password Required");
+        } else {
+          setError(""); // Clear any previous errors
+          login(email, password);
+        }
+      };
+      
   return (
     <div className="flex h-[80vh] items-center justify-center bg-gray-200">
       <div className="flex w-full lg:w-3/5 overflow-hidden rounded-lg bg-white shadow-lg">
@@ -38,7 +41,7 @@ const Login = () => {
         {/* Right Section with Form */}
         <div className="flex w-full lg:w-1/2 flex-col justify-center p-8">
           <input
-            type="text"
+            type="email"
             placeholder="Email"
             className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"  onChange={(e) => setEmail(e.target.value)}
          />

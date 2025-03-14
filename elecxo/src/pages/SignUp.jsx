@@ -11,12 +11,18 @@ const Signup = () => {
   console.log(user);
 
   const handleSignup = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validates email format
+
     if (name == "") {
       setError("* Please Enter Name")
     }
     else if (email == "") {
       setError("* Email Required")
-    } else if (password == "") {
+    }else if (!emailRegex.test(email)) {
+      setError("* Invalid Email Format");
+    } 
+    
+    else if (password == "") {
       setError("* Password Required")
 
     } else if(password.length<=6){
@@ -53,7 +59,7 @@ const Signup = () => {
             className="mb-4 w-full border-b-2 border-gray-300 p-3 shadow-sm focus:border-blue-600 focus:outline-none"
           />
           <input
-            type="text"
+            type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
