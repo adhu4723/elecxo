@@ -66,7 +66,7 @@ const CheckoutPage = () => {
         <div className="space-y-2 h-[250px] overflow-auto px-4 py-2">
   {cartItems && cartItems.length > 0 ? (
     cartItems.map((items) => (
-      <div key={items.id} className="flex gap-6 items-center border py-2 px-3 relative">
+      <div key={items.id} className="flex gap-6 items-center border py-2 px-3 relative ">
         <img width={100} height={100} src={items.image} alt={items.name} />
         <div>
           <span className="font-bold">{items.name}</span> <br />
@@ -82,9 +82,9 @@ const CheckoutPage = () => {
       </div>
     ))
   ) : (
-    <div className='flex gap-4 items-center justify-center'>
+    <div className='flex items-center justify-center flex-col'>
     <img
-    width={230}
+    width={200}
       src="https://images.vexels.com/media/users/3/192486/isolated/preview/b21f813da2e0c122d2950bf1b449106a-winter-woman-shopping-illustration.png"
       alt="Empty Cart"
     />

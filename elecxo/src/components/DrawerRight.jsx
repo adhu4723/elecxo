@@ -22,7 +22,7 @@ function CartDrawer({ isOpen, onClose }) {
 
   return (
     <Drawer
-      size={390} 
+      size={340} 
       placement="right"
       open={isOpen}
       onClose={onClose}
@@ -85,7 +85,10 @@ function CartDrawer({ isOpen, onClose }) {
             </div>
           ))
         ) : (
-          <p className="text-center text-gray-500">Your cart is empty.</p>
+          <div>
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-cart-illustration-download-in-svg-png-gif-file-formats--trolley-present-ecommerce-and-pack-e-commerce-illustrations-2289776.png" alt="" />
+             <button onClick={onClose} className="w-full bg-blue-600 text-white py-2">Continue Shopping</button>
+          </div>
         )}
       </div>
 
